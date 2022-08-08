@@ -1,8 +1,8 @@
-##Just a funny ZXC dancing cat in native javascript.
+## Just a funny ZXC dancing cat in native javascript.
 
-###The game is here 👉 [index.html](index.html).
+### The game is here 👉 [index.html](index.html).
 
-###Controls:
+### Controls:
 
 🐱 **Z X C** - to dance
 
