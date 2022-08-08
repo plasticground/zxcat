@@ -1,0 +1,135 @@
+@font-face {
+    font-family: metalMania;
+    src: url(resources/fonts/MetalMania-Regular.ttf);
+}
+
+@keyframes spawn {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+@keyframes unspawn {
+    0% { opacity: 1 }
+    100% { opacity: 0 }
+}
+
+@keyframes hit {
+    0% { color: #fff }
+    33% { color: #000 }
+    67% { opacity: 1 }
+    100% { opacity: 0; color: #ff0000 }
+}
+
+@keyframes miss {
+    0% { opacity: 1 }
+    100% { opacity: 0.2; color: #610000
+    }
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    color: #000;
+    font-family: metalMania, cursive;
+    z-index: 0;
+    overflow-y: hidden;
+}
+.hidden {
+    display: none;
+}
+
+.hud > * {
+    z-index: 2;
+}
+
+.hud .score {
+    left: 0;
+    position: absolute;
+    font-size: xxx-large;
+}
+
+.hud .health {
+    right: 0;
+    position: absolute;
+    font-size: xxx-large;
+    overflow-y: hidden;
+}
+
+.hud .health .header {
+    position: fixed;
+    right: 8rem;
+}
+
+.hud .cross {
+    width: 50px;
+    height: 50px;
+    margin-left: -35px;
+    bottom: 15%;
+    left: 50%;
+    position: absolute;
+    border: #fff solid 10px;
+    border-radius: 50%;
+}
+
+.hud .crossline {
+    margin-top: -85px;
+    height: 100px;
+    width: 100%;
+    top: 85%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: xxx-large;
+    overflow-x: hidden;
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+.marks span {
+    position: absolute;
+    bottom: 20%;
+}
+
+.hit {
+    animation: hit 1s forwards;
+}
+
+.miss {
+    animation: miss 2s forwards;
+}
+
+.messages {
+    z-index: 2;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.messages .help {
+    position: relative;
+    margin-left: 1em;
+    top: 50%;
+    animation: unspawn 10s forwards;
+}
+
+.help span {
+    padding: 1rem;
+    font-size: 5em;
+    border: 10px outset #e2e2e2;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #787878;
+}
+
+.cat {
+    z-index: 1;
+}
+
+.cat video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
